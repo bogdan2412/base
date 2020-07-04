@@ -508,7 +508,7 @@ let int63_round_down_exn t =
 ;;
 
 let int63_round_nearest_portable_alloc_exn t0 =
-  let t = (round_nearest [@ocaml.inlined always]) t0 in
+  let t = round_nearest t0 in
   if t > 0.
   then
     if t <= int63_round_ubound
